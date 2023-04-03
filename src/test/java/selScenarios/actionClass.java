@@ -44,6 +44,16 @@ public class actionClass {
         .sendKeys("abc")
         .perform();
 		}
+	void actClass1(WebDriver driver) throws InterruptedException {
+		driver.switchTo();
+		driver.findElement(By.xpath("//a[normalize-space()='More']")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//a[normalize-space()='Links']")).click();
+		Thread.sleep(1000);
+		new Actions(driver)
+        .sendKeys("abc")
+        .perform();
+		}
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
